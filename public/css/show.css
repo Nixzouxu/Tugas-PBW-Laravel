@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: #f5f0eb;
+    color: #3d2b1f;
+}
+
+header {
+    background: #3d2b1f;
+    color: #f5f0eb;
+    padding: 20px;
+}
+
+header a {
+    color: #c8a97e;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.container {
+    max-width: 750px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 2px 12px rgba(61, 43, 31, 0.1);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+.rating {
+    background: #f5a623;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.kota {
+    color: #c8a97e;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.info-item {
+    background: #f5f0eb;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.info-label {
+    font-size: 0.8rem;
+    color: #c8a97e;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.info-value {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #3d2b1f;
+}
+
+.deskripsi {
+    line-height: 1.8;
+    color: #6b4c35;
+    font-size: 0.95rem;
+    margin-top: 20px;
+}
+
+.btn-back {
+    display: inline-block;
+    margin-top: 30px;
+    background: #3d2b1f;
+    color: white;
+    padding: 10px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.btn-back:hover {
+    background: #6b4c35;
+}
