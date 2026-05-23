@@ -3,11 +3,18 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 use App\Models\KedaiKopi;
 
-class KedaiKopiSeeder extends Seeder {
-    public function run(): void {
+class KedaiKopiSeeder extends Seeder
+{
+    public function run(): void
+    {
+        // Matikan foreign key check dulu supaya truncate tidak error
+        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
         KedaiKopi::truncate();
+        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
+
         $data = [
             ['nama_kedai' => 'Kopi Tuku', 'kota' => 'Jakarta Selatan', 'provinsi' => 'DKI Jakarta', 'kopi_unggulan' => 'Kopi Susu Tetangga', 'suasana' => 'Modern', 'harga_mulai' => 25000, 'deskripsi' => 'Kedai kopi lokal yang terkenal dengan kopi susu khasnya yang menggunakan biji kopi pilihan Nusantara.', 'jam_buka' => '07.00 - 22.00', 'rating' => 4.8],
             ['nama_kedai' => 'Kopi Kenangan', 'kota' => 'Bandung', 'provinsi' => 'Jawa Barat', 'kopi_unggulan' => 'Kenangan Latte', 'suasana' => 'Cozy', 'harga_mulai' => 20000, 'deskripsi' => 'Chain kopi lokal Indonesia yang menyajikan kopi berkualitas tinggi dengan harga terjangkau.', 'jam_buka' => '08.00 - 21.00', 'rating' => 4.5],
